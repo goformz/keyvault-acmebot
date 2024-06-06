@@ -24,3 +24,4 @@ steps:
     GithubToken: '$(GithubToken)'
     runTests: false
     dotNetVersion: '6.0.x'
+    projects: 'KeyVault.Acmebot/KeyVault.Acmebot.csproj'
