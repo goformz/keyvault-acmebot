@@ -20,4 +20,4 @@ steps:
   parameters:
     GithubToken: '$(GithubToken)'
     runTests: false
-    dotNetVersion: '8.0.x'
+    dotNetVersion: '6.0.x'
