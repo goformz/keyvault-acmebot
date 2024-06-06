@@ -1,0 +1,22 @@
+name: 1.0$(Rev:.r)
+
+resources:
+  repositories:
+    - repository: templates
+      type: github
+      name: goformz/devops-templates
+      endpoint: github
+
+trigger:
+  - master
+  - develop
+  - release-*
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- template: build-netcore.yml@templates
+  parameters:
+    GithubToken: '$(GithubToken)'
+    dotNetVersion: '8.0.x'
