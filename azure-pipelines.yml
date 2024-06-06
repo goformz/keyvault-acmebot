@@ -16,6 +16,9 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- checkout: self
+  lfs: true
+  submodules: true
 - template: build-netcore.yml@templates
   parameters:
     GithubToken: '$(GithubToken)'
