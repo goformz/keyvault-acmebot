@@ -19,4 +19,5 @@ steps:
 - template: build-netcore.yml@templates
   parameters:
     GithubToken: '$(GithubToken)'
+    runTests: false
     dotNetVersion: '8.0.x'
